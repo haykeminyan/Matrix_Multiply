@@ -1,7 +1,7 @@
 #include <iostream>
 #include<ctime>
 #include<cstdlib>
-#define ARRAY_ELEM 100000 
+
 using namespace std;
 
  

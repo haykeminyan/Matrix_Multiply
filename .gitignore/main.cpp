@@ -83,7 +83,9 @@ for (int i = 0; i<N; i++)
     }
     
 cout<<"\n"<<endl;
-  
+  delete[]A;
+  delete[]B;
+  delete[]C;
   float fTimeStop = clock()/(float)CLOCKS_PER_SEC; 
   cout<<"The length of this proccess is "<< fTimeStop-fTimeStart<< " seconds\n";
   getchar(); 

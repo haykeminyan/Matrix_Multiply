@@ -14,16 +14,17 @@ int t=clock();
 
 //Индексные переменные:
 int i,j,k;
+int **A,**B,**C;
 
-
-//Первая матрица:
-static int A[N][N];
-//Вторая матрица:
-static int B[N][N];
-//Третья матрица (результат):
-static int C[N][N];
-//Ввод (построчный) элементов первой матрицы:
-  
+A=new  int*[N];
+for(i=0;i<N;i++)
+A[i]=new  int[N];
+B=new int*[N];
+for(i=0;i<N;i++)
+B[i]=new  int[N];
+C=new int*[N];  
+for(i=0;i<N;i++)
+C[i]=new  int[N];
   
 
 
@@ -37,19 +38,25 @@ for (i = 0; i < N; i++)
 
 cout<<"\n";
     
+cout<<"Matrix A is:\n";
+cout<<endl;
 for (int i = 0; i<N; i++)
    {
         for (int j = 0; j<N; j++)
-            cout << A[i][j] << "  ";
+            cout << A[i][j] << " \t ";
        
         cout << endl;
     }
     cout<<"\n";
 
+            cout << "Matrix B is:\n"; 
+            cout<<endl;
+        
+
 for (int i = 0; i<N; i++)
     {
         for (int j = 0; j<N; j++)
-            cout << B[i][j] << "  ";
+            cout << B[i][j] << " \t ";
         cout << endl;
     }
 
@@ -66,20 +73,20 @@ for (int i = 0; i<N; i++)
     }
    cout<<"\n"<<endl;
    // Вывод матрицы произведения
-    cout << "Матрица произведения: " << endl;
+    cout << "Matrix multiplication: " << endl;
     cout<<"\n"<<endl;
     for (int i = 0; i<N; i++)
     {
         for (int j = 0; j<N; j++)
-            cout << C[i][j] << " ";
+            cout << C[i][j] << " \t ";
         cout << endl;
     }
     
 cout<<"\n"<<endl;
   
   float fTimeStop = clock()/(float)CLOCKS_PER_SEC; 
-  printf("Длительность процесса %.13f секунд\n", fTimeStop-fTimeStart); 
+  cout<<"The length of this proccess is "<< fTimeStop-fTimeStart<< " seconds\n";
   getchar(); 
  return 0;
 }
-   
+ 
